@@ -1,0 +1,46 @@
+{
+  "name": "ts-lib-boilerplate",
+  "version": "0.1.0",
+  "main": "./lib/index.js",
+  "typings": "./lib/index.d.ts",
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "tsc",
+    "test": "jest"
+  },
+  "files": [
+    "lib"
+  ],
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "transform": {
+      "\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "/src/.*\\.spec\\.ts$"
+  },
+  "keywords": [
+    "minimal",
+    "typescript",
+    "boilerplate"
+  ],
+  "author": "Michal Zalecki <michal@michalzalecki.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichalZalecki/ts-lib-boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MichalZalecki/ts-lib-boilerplate/issues"
+  },
+  "homepage": "https://github.com/MichalZalecki/ts-lib-boilerplate#readme",
+  "description": "Minimal TypeScript library boilerplate",
+  "devDependencies": {
+    "@types/jest": "^24.0.15",
+    "jest": "^24.8.0",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.5.2"
+  }
+}
