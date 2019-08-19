@@ -6,13 +6,14 @@
     "outDir": "./lib",
     "strict": true,
     "types": [
-      "node"
+      "node",
+      "jest"
     ]
   },
   "include": [
-    "src/**/*"
+    "src/**/*.spec.*"
   ],
   "exclude": [
-    "src/**/*.spec.*"
+    "src/**/*"
   ]
 }
