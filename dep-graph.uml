@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JavaScript-modules-diagram</ID>
+  <OriginalElement>/home/tom/code/credit/src/src;/home/tom/code/credit/src/frontend;/home/tom/code/credit/src/backend;</OriginalElement>
+  <nodes>
+    <node x="1166.0" y="659.0">/home/tom/code/credit/src/frontend/apply_patch.js#common.ts#55;/home/tom/code/credit/src/frontend/apply_patch.js#constants.ts#143;/home/tom/code/credit/src/frontend/apply_patch.js#counter.ts#296;/home/tom/code/credit/src/frontend/apply_patch.js#table.js#256;/home/tom/code/credit/src/frontend/apply_patch.js#text.js#201;</node>
+    <node x="503.0" y="589.0">/home/tom/code/credit/src/src/automerge.js#Backend#128;/home/tom/code/credit/src/src/automerge.js#Frontend#87;/home/tom/code/credit/src/src/automerge.js#common.ts#182;/home/tom/code/credit/src/src/automerge.js#connection.js#4149;/home/tom/code/credit/src/src/automerge.js#doc_set.js#4069;/home/tom/code/credit/src/src/automerge.js#transit#6;/home/tom/code/credit/src/src/automerge.js#uuid#55;/home/tom/code/credit/src/src/automerge.js#watchable_doc.js#4107;</node>
+    <node x="850.0" y="736.0">/home/tom/code/credit/src/src/common.ts</node>
+    <node x="194.0" y="603.0">/home/tom/code/credit/src/src/connection.js#Backend#138;/home/tom/code/credit/src/src/connection.js#Frontend#97;/home/tom/code/credit/src/src/connection.js#common.ts#70;/home/tom/code/credit/src/src/connection.js#immutable-nonambient.d.ts#24;</node>
+    <node x="1073.0" y="1136.0">/home/tom/code/credit/src/frontend/constants.ts</node>
+    <node x="1098.0" y="899.0">/home/tom/code/credit/src/frontend/context.js#apply_patch.js#106;/home/tom/code/credit/src/frontend/context.js#common.ts#313;/home/tom/code/credit/src/frontend/context.js#constants.ts#59;/home/tom/code/credit/src/frontend/context.js#counter.ts#258;/home/tom/code/credit/src/frontend/context.js#table.js#197;/home/tom/code/credit/src/frontend/context.js#text.js#160;/home/tom/code/credit/src/frontend/context.js#uuid#345;</node>
+    <node x="1302.0" y="990.0">/home/tom/code/credit/src/frontend/counter.ts</node>
+    <node x="216.0" y="899.0">/home/tom/code/credit/src/src/doc_set.js#Backend#122;/home/tom/code/credit/src/src/doc_set.js#Frontend#81;/home/tom/code/credit/src/src/doc_set.js#immutable-nonambient.d.ts#21;/home/tom/code/credit/src/src/doc_set.js#uuid#49;</node>
+    <node x="261.0" y="364.0">/home/tom/code/credit/node_modules/immutable/dist/immutable-nonambient.d.ts</node>
+    <node x="0.0" y="500.0">/home/tom/code/credit/node_modules/transit-immutable-js/index.js</node>
+    <node x="714.0" y="535.0">/home/tom/code/credit/src/backend/index.js#OpSet#131;/home/tom/code/credit/src/backend/index.js#common.ts#99;/home/tom/code/credit/src/backend/index.js#immutable-nonambient.d.ts#30;</node>
+    <node x="594.0" y="850.0">/home/tom/code/credit/src/frontend/index.js#apply_patch.js#273;/home/tom/code/credit/src/frontend/index.js#common.ts#149;/home/tom/code/credit/src/frontend/index.js#constants.ts#83;/home/tom/code/credit/src/frontend/index.js#context.js#369;/home/tom/code/credit/src/frontend/index.js#counter.ts#485;/home/tom/code/credit/src/frontend/index.js#proxies.js#327;/home/tom/code/credit/src/frontend/index.js#table.js#445;/home/tom/code/credit/src/frontend/index.js#text.js#408;/home/tom/code/credit/src/frontend/index.js#uuid#181;</node>
+    <node x="605.0" y="251.0">/home/tom/code/credit/src/backend/op_set.js#common.ts#127;/home/tom/code/credit/src/backend/op_set.js#immutable-nonambient.d.ts#27;/home/tom/code/credit/src/backend/op_set.js#skip_list.js#70;</node>
+    <node x="785.0" y="942.0">/home/tom/code/credit/src/frontend/proxies.js#common.ts#20;/home/tom/code/credit/src/frontend/proxies.js#constants.ts#83;/home/tom/code/credit/src/frontend/proxies.js#table.js#161;/home/tom/code/credit/src/frontend/proxies.js#text.js#124;</node>
+    <node x="443.0" y="0.0">/home/tom/code/credit/src/backend/skip_list.js#immutable-nonambient.d.ts#16;</node>
+    <node x="882.0" y="825.0">/home/tom/code/credit/src/frontend/table.js#common.ts#90;/home/tom/code/credit/src/frontend/table.js#constants.ts#33;</node>
+    <node x="958.0" y="1240.0">/home/tom/code/credit/src/frontend/text.js#constants.ts#42;</node>
+    <node x="613.0" y="1192.0">/home/tom/code/credit/src/src/uuid.ts#uuid#6;</node>
+    <node x="455.0" y="1368.0">/home/tom/code/credit/node_modules/uuid/v4.js</node>
+    <node x="890.0" y="338.0">/home/tom/code/credit/src/src/watchable_doc.js#Backend#85;/home/tom/code/credit/src/src/watchable_doc.js#Frontend#44;/home/tom/code/credit/src/src/watchable_doc.js#immutable-nonambient.d.ts#16;</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="/home/tom/code/credit/src/src/connection.js#Backend#138;/home/tom/code/credit/src/src/connection.js#Frontend#97;/home/tom/code/credit/src/src/connection.js#common.ts#70;/home/tom/code/credit/src/src/connection.js#immutable-nonambient.d.ts#24;" target="/home/tom/code/credit/src/backend/index.js#OpSet#131;/home/tom/code/credit/src/backend/index.js#common.ts#99;/home/tom/code/credit/src/backend/index.js#immutable-nonambient.d.ts#30;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/frontend/index.js#apply_patch.js#273;/home/tom/code/credit/src/frontend/index.js#common.ts#149;/home/tom/code/credit/src/frontend/index.js#constants.ts#83;/home/tom/code/credit/src/frontend/index.js#context.js#369;/home/tom/code/credit/src/frontend/index.js#counter.ts#485;/home/tom/code/credit/src/frontend/index.js#proxies.js#327;/home/tom/code/credit/src/frontend/index.js#table.js#445;/home/tom/code/credit/src/frontend/index.js#text.js#408;/home/tom/code/credit/src/frontend/index.js#uuid#181;" target="/home/tom/code/credit/src/src/uuid.ts#uuid#6;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/src/automerge.js#Backend#128;/home/tom/code/credit/src/src/automerge.js#Frontend#87;/home/tom/code/credit/src/src/automerge.js#common.ts#182;/home/tom/code/credit/src/src/automerge.js#connection.js#4149;/home/tom/code/credit/src/src/automerge.js#doc_set.js#4069;/home/tom/code/credit/src/src/automerge.js#transit#6;/home/tom/code/credit/src/src/automerge.js#uuid#55;/home/tom/code/credit/src/src/automerge.js#watchable_doc.js#4107;" target="/home/tom/code/credit/src/src/uuid.ts#uuid#6;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/frontend/apply_patch.js#common.ts#55;/home/tom/code/credit/src/frontend/apply_patch.js#constants.ts#143;/home/tom/code/credit/src/frontend/apply_patch.js#counter.ts#296;/home/tom/code/credit/src/frontend/apply_patch.js#table.js#256;/home/tom/code/credit/src/frontend/apply_patch.js#text.js#201;" target="/home/tom/code/credit/src/src/common.ts">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/frontend/proxies.js#common.ts#20;/home/tom/code/credit/src/frontend/proxies.js#constants.ts#83;/home/tom/code/credit/src/frontend/proxies.js#table.js#161;/home/tom/code/credit/src/frontend/proxies.js#text.js#124;" target="/home/tom/code/credit/src/frontend/table.js#common.ts#90;/home/tom/code/credit/src/frontend/table.js#constants.ts#33;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/src/doc_set.js#Backend#122;/home/tom/code/credit/src/src/doc_set.js#Frontend#81;/home/tom/code/credit/src/src/doc_set.js#immutable-nonambient.d.ts#21;/home/tom/code/credit/src/src/doc_set.js#uuid#49;" target="/home/tom/code/credit/src/frontend/index.js#apply_patch.js#273;/home/tom/code/credit/src/frontend/index.js#common.ts#149;/home/tom/code/credit/src/frontend/index.js#constants.ts#83;/home/tom/code/credit/src/frontend/index.js#context.js#369;/home/tom/code/credit/src/frontend/index.js#counter.ts#485;/home/tom/code/credit/src/frontend/index.js#proxies.js#327;/home/tom/code/credit/src/frontend/index.js#table.js#445;/home/tom/code/credit/src/frontend/index.js#text.js#408;/home/tom/code/credit/src/frontend/index.js#uuid#181;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/backend/index.js#OpSet#131;/home/tom/code/credit/src/backend/index.js#common.ts#99;/home/tom/code/credit/src/backend/index.js#immutable-nonambient.d.ts#30;" target="/home/tom/code/credit/src/src/common.ts">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/frontend/context.js#apply_patch.js#106;/home/tom/code/credit/src/frontend/context.js#common.ts#313;/home/tom/code/credit/src/frontend/context.js#constants.ts#59;/home/tom/code/credit/src/frontend/context.js#counter.ts#258;/home/tom/code/credit/src/frontend/context.js#table.js#197;/home/tom/code/credit/src/frontend/context.js#text.js#160;/home/tom/code/credit/src/frontend/context.js#uuid#345;" target="/home/tom/code/credit/src/src/common.ts">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/src/automerge.js#Backend#128;/home/tom/code/credit/src/src/automerge.js#Frontend#87;/home/tom/code/credit/src/src/automerge.js#common.ts#182;/home/tom/code/credit/src/src/automerge.js#connection.js#4149;/home/tom/code/credit/src/src/automerge.js#doc_set.js#4069;/home/tom/code/credit/src/src/automerge.js#transit#6;/home/tom/code/credit/src/src/automerge.js#uuid#55;/home/tom/code/credit/src/src/automerge.js#watchable_doc.js#4107;" target="/home/tom/code/credit/src/src/common.ts">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/frontend/proxies.js#common.ts#20;/home/tom/code/credit/src/frontend/proxies.js#constants.ts#83;/home/tom/code/credit/src/frontend/proxies.js#table.js#161;/home/tom/code/credit/src/frontend/proxies.js#text.js#124;" target="/home/tom/code/credit/src/frontend/text.js#constants.ts#42;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/src/watchable_doc.js#Backend#85;/home/tom/code/credit/src/src/watchable_doc.js#Frontend#44;/home/tom/code/credit/src/src/watchable_doc.js#immutable-nonambient.d.ts#16;" target="/home/tom/code/credit/src/frontend/index.js#apply_patch.js#273;/home/tom/code/credit/src/frontend/index.js#common.ts#149;/home/tom/code/credit/src/frontend/index.js#constants.ts#83;/home/tom/code/credit/src/frontend/index.js#context.js#369;/home/tom/code/credit/src/frontend/index.js#counter.ts#485;/home/tom/code/credit/src/frontend/index.js#proxies.js#327;/home/tom/code/credit/src/frontend/index.js#table.js#445;/home/tom/code/credit/src/frontend/index.js#text.js#408;/home/tom/code/credit/src/frontend/index.js#uuid#181;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/src/uuid.ts#uuid#6;" target="/home/tom/code/credit/node_modules/uuid/v4.js">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/backend/skip_list.js#immutable-nonambient.d.ts#16;" target="/home/tom/code/credit/node_modules/immutable/dist/immutable-nonambient.d.ts">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/frontend/apply_patch.js#common.ts#55;/home/tom/code/credit/src/frontend/apply_patch.js#constants.ts#143;/home/tom/code/credit/src/frontend/apply_patch.js#counter.ts#296;/home/tom/code/credit/src/frontend/apply_patch.js#table.js#256;/home/tom/code/credit/src/frontend/apply_patch.js#text.js#201;" target="/home/tom/code/credit/src/frontend/counter.ts">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/backend/index.js#OpSet#131;/home/tom/code/credit/src/backend/index.js#common.ts#99;/home/tom/code/credit/src/backend/index.js#immutable-nonambient.d.ts#30;" target="/home/tom/code/credit/src/backend/op_set.js#common.ts#127;/home/tom/code/credit/src/backend/op_set.js#immutable-nonambient.d.ts#27;/home/tom/code/credit/src/backend/op_set.js#skip_list.js#70;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/frontend/context.js#apply_patch.js#106;/home/tom/code/credit/src/frontend/context.js#common.ts#313;/home/tom/code/credit/src/frontend/context.js#constants.ts#59;/home/tom/code/credit/src/frontend/context.js#counter.ts#258;/home/tom/code/credit/src/frontend/context.js#table.js#197;/home/tom/code/credit/src/frontend/context.js#text.js#160;/home/tom/code/credit/src/frontend/context.js#uuid#345;" target="/home/tom/code/credit/src/src/uuid.ts#uuid#6;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/src/doc_set.js#Backend#122;/home/tom/code/credit/src/src/doc_set.js#Frontend#81;/home/tom/code/credit/src/src/doc_set.js#immutable-nonambient.d.ts#21;/home/tom/code/credit/src/src/doc_set.js#uuid#49;" target="/home/tom/code/credit/node_modules/immutable/dist/immutable-nonambient.d.ts">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/backend/op_set.js#common.ts#127;/home/tom/code/credit/src/backend/op_set.js#immutable-nonambient.d.ts#27;/home/tom/code/credit/src/backend/op_set.js#skip_list.js#70;" target="/home/tom/code/credit/src/backend/skip_list.js#immutable-nonambient.d.ts#16;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/src/doc_set.js#Backend#122;/home/tom/code/credit/src/src/doc_set.js#Frontend#81;/home/tom/code/credit/src/src/doc_set.js#immutable-nonambient.d.ts#21;/home/tom/code/credit/src/src/doc_set.js#uuid#49;" target="/home/tom/code/credit/src/src/uuid.ts#uuid#6;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/backend/op_set.js#common.ts#127;/home/tom/code/credit/src/backend/op_set.js#immutable-nonambient.d.ts#27;/home/tom/code/credit/src/backend/op_set.js#skip_list.js#70;" target="/home/tom/code/credit/node_modules/immutable/dist/immutable-nonambient.d.ts">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/frontend/index.js#apply_patch.js#273;/home/tom/code/credit/src/frontend/index.js#common.ts#149;/home/tom/code/credit/src/frontend/index.js#constants.ts#83;/home/tom/code/credit/src/frontend/index.js#context.js#369;/home/tom/code/credit/src/frontend/index.js#counter.ts#485;/home/tom/code/credit/src/frontend/index.js#proxies.js#327;/home/tom/code/credit/src/frontend/index.js#table.js#445;/home/tom/code/credit/src/frontend/index.js#text.js#408;/home/tom/code/credit/src/frontend/index.js#uuid#181;" target="/home/tom/code/credit/src/frontend/text.js#constants.ts#42;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/frontend/proxies.js#common.ts#20;/home/tom/code/credit/src/frontend/proxies.js#constants.ts#83;/home/tom/code/credit/src/frontend/proxies.js#table.js#161;/home/tom/code/credit/src/frontend/proxies.js#text.js#124;" target="/home/tom/code/credit/src/frontend/constants.ts">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/backend/index.js#OpSet#131;/home/tom/code/credit/src/backend/index.js#common.ts#99;/home/tom/code/credit/src/backend/index.js#immutable-nonambient.d.ts#30;" target="/home/tom/code/credit/node_modules/immutable/dist/immutable-nonambient.d.ts">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/frontend/proxies.js#common.ts#20;/home/tom/code/credit/src/frontend/proxies.js#constants.ts#83;/home/tom/code/credit/src/frontend/proxies.js#table.js#161;/home/tom/code/credit/src/frontend/proxies.js#text.js#124;" target="/home/tom/code/credit/src/src/common.ts">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/frontend/index.js#apply_patch.js#273;/home/tom/code/credit/src/frontend/index.js#common.ts#149;/home/tom/code/credit/src/frontend/index.js#constants.ts#83;/home/tom/code/credit/src/frontend/index.js#context.js#369;/home/tom/code/credit/src/frontend/index.js#counter.ts#485;/home/tom/code/credit/src/frontend/index.js#proxies.js#327;/home/tom/code/credit/src/frontend/index.js#table.js#445;/home/tom/code/credit/src/frontend/index.js#text.js#408;/home/tom/code/credit/src/frontend/index.js#uuid#181;" target="/home/tom/code/credit/src/frontend/counter.ts">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/frontend/text.js#constants.ts#42;" target="/home/tom/code/credit/src/frontend/constants.ts">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/src/watchable_doc.js#Backend#85;/home/tom/code/credit/src/src/watchable_doc.js#Frontend#44;/home/tom/code/credit/src/src/watchable_doc.js#immutable-nonambient.d.ts#16;" target="/home/tom/code/credit/node_modules/immutable/dist/immutable-nonambient.d.ts">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/src/connection.js#Backend#138;/home/tom/code/credit/src/src/connection.js#Frontend#97;/home/tom/code/credit/src/src/connection.js#common.ts#70;/home/tom/code/credit/src/src/connection.js#immutable-nonambient.d.ts#24;" target="/home/tom/code/credit/src/frontend/index.js#apply_patch.js#273;/home/tom/code/credit/src/frontend/index.js#common.ts#149;/home/tom/code/credit/src/frontend/index.js#constants.ts#83;/home/tom/code/credit/src/frontend/index.js#context.js#369;/home/tom/code/credit/src/frontend/index.js#counter.ts#485;/home/tom/code/credit/src/frontend/index.js#proxies.js#327;/home/tom/code/credit/src/frontend/index.js#table.js#445;/home/tom/code/credit/src/frontend/index.js#text.js#408;/home/tom/code/credit/src/frontend/index.js#uuid#181;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/frontend/context.js#apply_patch.js#106;/home/tom/code/credit/src/frontend/context.js#common.ts#313;/home/tom/code/credit/src/frontend/context.js#constants.ts#59;/home/tom/code/credit/src/frontend/context.js#counter.ts#258;/home/tom/code/credit/src/frontend/context.js#table.js#197;/home/tom/code/credit/src/frontend/context.js#text.js#160;/home/tom/code/credit/src/frontend/context.js#uuid#345;" target="/home/tom/code/credit/src/frontend/table.js#common.ts#90;/home/tom/code/credit/src/frontend/table.js#constants.ts#33;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/frontend/index.js#apply_patch.js#273;/home/tom/code/credit/src/frontend/index.js#common.ts#149;/home/tom/code/credit/src/frontend/index.js#constants.ts#83;/home/tom/code/credit/src/frontend/index.js#context.js#369;/home/tom/code/credit/src/frontend/index.js#counter.ts#485;/home/tom/code/credit/src/frontend/index.js#proxies.js#327;/home/tom/code/credit/src/frontend/index.js#table.js#445;/home/tom/code/credit/src/frontend/index.js#text.js#408;/home/tom/code/credit/src/frontend/index.js#uuid#181;" target="/home/tom/code/credit/src/frontend/context.js#apply_patch.js#106;/home/tom/code/credit/src/frontend/context.js#common.ts#313;/home/tom/code/credit/src/frontend/context.js#constants.ts#59;/home/tom/code/credit/src/frontend/context.js#counter.ts#258;/home/tom/code/credit/src/frontend/context.js#table.js#197;/home/tom/code/credit/src/frontend/context.js#text.js#160;/home/tom/code/credit/src/frontend/context.js#uuid#345;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/frontend/apply_patch.js#common.ts#55;/home/tom/code/credit/src/frontend/apply_patch.js#constants.ts#143;/home/tom/code/credit/src/frontend/apply_patch.js#counter.ts#296;/home/tom/code/credit/src/frontend/apply_patch.js#table.js#256;/home/tom/code/credit/src/frontend/apply_patch.js#text.js#201;" target="/home/tom/code/credit/src/frontend/text.js#constants.ts#42;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/src/automerge.js#Backend#128;/home/tom/code/credit/src/src/automerge.js#Frontend#87;/home/tom/code/credit/src/src/automerge.js#common.ts#182;/home/tom/code/credit/src/src/automerge.js#connection.js#4149;/home/tom/code/credit/src/src/automerge.js#doc_set.js#4069;/home/tom/code/credit/src/src/automerge.js#transit#6;/home/tom/code/credit/src/src/automerge.js#uuid#55;/home/tom/code/credit/src/src/automerge.js#watchable_doc.js#4107;" target="/home/tom/code/credit/node_modules/transit-immutable-js/index.js">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/backend/op_set.js#common.ts#127;/home/tom/code/credit/src/backend/op_set.js#immutable-nonambient.d.ts#27;/home/tom/code/credit/src/backend/op_set.js#skip_list.js#70;" target="/home/tom/code/credit/src/src/common.ts">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/src/automerge.js#Backend#128;/home/tom/code/credit/src/src/automerge.js#Frontend#87;/home/tom/code/credit/src/src/automerge.js#common.ts#182;/home/tom/code/credit/src/src/automerge.js#connection.js#4149;/home/tom/code/credit/src/src/automerge.js#doc_set.js#4069;/home/tom/code/credit/src/src/automerge.js#transit#6;/home/tom/code/credit/src/src/automerge.js#uuid#55;/home/tom/code/credit/src/src/automerge.js#watchable_doc.js#4107;" target="/home/tom/code/credit/src/src/watchable_doc.js#Backend#85;/home/tom/code/credit/src/src/watchable_doc.js#Frontend#44;/home/tom/code/credit/src/src/watchable_doc.js#immutable-nonambient.d.ts#16;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/frontend/context.js#apply_patch.js#106;/home/tom/code/credit/src/frontend/context.js#common.ts#313;/home/tom/code/credit/src/frontend/context.js#constants.ts#59;/home/tom/code/credit/src/frontend/context.js#counter.ts#258;/home/tom/code/credit/src/frontend/context.js#table.js#197;/home/tom/code/credit/src/frontend/context.js#text.js#160;/home/tom/code/credit/src/frontend/context.js#uuid#345;" target="/home/tom/code/credit/src/frontend/constants.ts">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/frontend/index.js#apply_patch.js#273;/home/tom/code/credit/src/frontend/index.js#common.ts#149;/home/tom/code/credit/src/frontend/index.js#constants.ts#83;/home/tom/code/credit/src/frontend/index.js#context.js#369;/home/tom/code/credit/src/frontend/index.js#counter.ts#485;/home/tom/code/credit/src/frontend/index.js#proxies.js#327;/home/tom/code/credit/src/frontend/index.js#table.js#445;/home/tom/code/credit/src/frontend/index.js#text.js#408;/home/tom/code/credit/src/frontend/index.js#uuid#181;" target="/home/tom/code/credit/src/src/common.ts">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/src/automerge.js#Backend#128;/home/tom/code/credit/src/src/automerge.js#Frontend#87;/home/tom/code/credit/src/src/automerge.js#common.ts#182;/home/tom/code/credit/src/src/automerge.js#connection.js#4149;/home/tom/code/credit/src/src/automerge.js#doc_set.js#4069;/home/tom/code/credit/src/src/automerge.js#transit#6;/home/tom/code/credit/src/src/automerge.js#uuid#55;/home/tom/code/credit/src/src/automerge.js#watchable_doc.js#4107;" target="/home/tom/code/credit/src/src/doc_set.js#Backend#122;/home/tom/code/credit/src/src/doc_set.js#Frontend#81;/home/tom/code/credit/src/src/doc_set.js#immutable-nonambient.d.ts#21;/home/tom/code/credit/src/src/doc_set.js#uuid#49;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/frontend/index.js#apply_patch.js#273;/home/tom/code/credit/src/frontend/index.js#common.ts#149;/home/tom/code/credit/src/frontend/index.js#constants.ts#83;/home/tom/code/credit/src/frontend/index.js#context.js#369;/home/tom/code/credit/src/frontend/index.js#counter.ts#485;/home/tom/code/credit/src/frontend/index.js#proxies.js#327;/home/tom/code/credit/src/frontend/index.js#table.js#445;/home/tom/code/credit/src/frontend/index.js#text.js#408;/home/tom/code/credit/src/frontend/index.js#uuid#181;" target="/home/tom/code/credit/src/frontend/apply_patch.js#common.ts#55;/home/tom/code/credit/src/frontend/apply_patch.js#constants.ts#143;/home/tom/code/credit/src/frontend/apply_patch.js#counter.ts#296;/home/tom/code/credit/src/frontend/apply_patch.js#table.js#256;/home/tom/code/credit/src/frontend/apply_patch.js#text.js#201;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/frontend/context.js#apply_patch.js#106;/home/tom/code/credit/src/frontend/context.js#common.ts#313;/home/tom/code/credit/src/frontend/context.js#constants.ts#59;/home/tom/code/credit/src/frontend/context.js#counter.ts#258;/home/tom/code/credit/src/frontend/context.js#table.js#197;/home/tom/code/credit/src/frontend/context.js#text.js#160;/home/tom/code/credit/src/frontend/context.js#uuid#345;" target="/home/tom/code/credit/src/frontend/counter.ts">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/src/connection.js#Backend#138;/home/tom/code/credit/src/src/connection.js#Frontend#97;/home/tom/code/credit/src/src/connection.js#common.ts#70;/home/tom/code/credit/src/src/connection.js#immutable-nonambient.d.ts#24;" target="/home/tom/code/credit/node_modules/immutable/dist/immutable-nonambient.d.ts">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/src/automerge.js#Backend#128;/home/tom/code/credit/src/src/automerge.js#Frontend#87;/home/tom/code/credit/src/src/automerge.js#common.ts#182;/home/tom/code/credit/src/src/automerge.js#connection.js#4149;/home/tom/code/credit/src/src/automerge.js#doc_set.js#4069;/home/tom/code/credit/src/src/automerge.js#transit#6;/home/tom/code/credit/src/src/automerge.js#uuid#55;/home/tom/code/credit/src/src/automerge.js#watchable_doc.js#4107;" target="/home/tom/code/credit/src/frontend/index.js#apply_patch.js#273;/home/tom/code/credit/src/frontend/index.js#common.ts#149;/home/tom/code/credit/src/frontend/index.js#constants.ts#83;/home/tom/code/credit/src/frontend/index.js#context.js#369;/home/tom/code/credit/src/frontend/index.js#counter.ts#485;/home/tom/code/credit/src/frontend/index.js#proxies.js#327;/home/tom/code/credit/src/frontend/index.js#table.js#445;/home/tom/code/credit/src/frontend/index.js#text.js#408;/home/tom/code/credit/src/frontend/index.js#uuid#181;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/frontend/table.js#common.ts#90;/home/tom/code/credit/src/frontend/table.js#constants.ts#33;" target="/home/tom/code/credit/src/src/common.ts">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/frontend/table.js#common.ts#90;/home/tom/code/credit/src/frontend/table.js#constants.ts#33;" target="/home/tom/code/credit/src/frontend/constants.ts">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/frontend/context.js#apply_patch.js#106;/home/tom/code/credit/src/frontend/context.js#common.ts#313;/home/tom/code/credit/src/frontend/context.js#constants.ts#59;/home/tom/code/credit/src/frontend/context.js#counter.ts#258;/home/tom/code/credit/src/frontend/context.js#table.js#197;/home/tom/code/credit/src/frontend/context.js#text.js#160;/home/tom/code/credit/src/frontend/context.js#uuid#345;" target="/home/tom/code/credit/src/frontend/apply_patch.js#common.ts#55;/home/tom/code/credit/src/frontend/apply_patch.js#constants.ts#143;/home/tom/code/credit/src/frontend/apply_patch.js#counter.ts#296;/home/tom/code/credit/src/frontend/apply_patch.js#table.js#256;/home/tom/code/credit/src/frontend/apply_patch.js#text.js#201;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/frontend/index.js#apply_patch.js#273;/home/tom/code/credit/src/frontend/index.js#common.ts#149;/home/tom/code/credit/src/frontend/index.js#constants.ts#83;/home/tom/code/credit/src/frontend/index.js#context.js#369;/home/tom/code/credit/src/frontend/index.js#counter.ts#485;/home/tom/code/credit/src/frontend/index.js#proxies.js#327;/home/tom/code/credit/src/frontend/index.js#table.js#445;/home/tom/code/credit/src/frontend/index.js#text.js#408;/home/tom/code/credit/src/frontend/index.js#uuid#181;" target="/home/tom/code/credit/src/frontend/constants.ts">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/src/automerge.js#Backend#128;/home/tom/code/credit/src/src/automerge.js#Frontend#87;/home/tom/code/credit/src/src/automerge.js#common.ts#182;/home/tom/code/credit/src/src/automerge.js#connection.js#4149;/home/tom/code/credit/src/src/automerge.js#doc_set.js#4069;/home/tom/code/credit/src/src/automerge.js#transit#6;/home/tom/code/credit/src/src/automerge.js#uuid#55;/home/tom/code/credit/src/src/automerge.js#watchable_doc.js#4107;" target="/home/tom/code/credit/src/backend/index.js#OpSet#131;/home/tom/code/credit/src/backend/index.js#common.ts#99;/home/tom/code/credit/src/backend/index.js#immutable-nonambient.d.ts#30;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/frontend/index.js#apply_patch.js#273;/home/tom/code/credit/src/frontend/index.js#common.ts#149;/home/tom/code/credit/src/frontend/index.js#constants.ts#83;/home/tom/code/credit/src/frontend/index.js#context.js#369;/home/tom/code/credit/src/frontend/index.js#counter.ts#485;/home/tom/code/credit/src/frontend/index.js#proxies.js#327;/home/tom/code/credit/src/frontend/index.js#table.js#445;/home/tom/code/credit/src/frontend/index.js#text.js#408;/home/tom/code/credit/src/frontend/index.js#uuid#181;" target="/home/tom/code/credit/src/frontend/table.js#common.ts#90;/home/tom/code/credit/src/frontend/table.js#constants.ts#33;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/frontend/apply_patch.js#common.ts#55;/home/tom/code/credit/src/frontend/apply_patch.js#constants.ts#143;/home/tom/code/credit/src/frontend/apply_patch.js#counter.ts#296;/home/tom/code/credit/src/frontend/apply_patch.js#table.js#256;/home/tom/code/credit/src/frontend/apply_patch.js#text.js#201;" target="/home/tom/code/credit/src/frontend/table.js#common.ts#90;/home/tom/code/credit/src/frontend/table.js#constants.ts#33;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/src/automerge.js#Backend#128;/home/tom/code/credit/src/src/automerge.js#Frontend#87;/home/tom/code/credit/src/src/automerge.js#common.ts#182;/home/tom/code/credit/src/src/automerge.js#connection.js#4149;/home/tom/code/credit/src/src/automerge.js#doc_set.js#4069;/home/tom/code/credit/src/src/automerge.js#transit#6;/home/tom/code/credit/src/src/automerge.js#uuid#55;/home/tom/code/credit/src/src/automerge.js#watchable_doc.js#4107;" target="/home/tom/code/credit/src/src/connection.js#Backend#138;/home/tom/code/credit/src/src/connection.js#Frontend#97;/home/tom/code/credit/src/src/connection.js#common.ts#70;/home/tom/code/credit/src/src/connection.js#immutable-nonambient.d.ts#24;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/frontend/index.js#apply_patch.js#273;/home/tom/code/credit/src/frontend/index.js#common.ts#149;/home/tom/code/credit/src/frontend/index.js#constants.ts#83;/home/tom/code/credit/src/frontend/index.js#context.js#369;/home/tom/code/credit/src/frontend/index.js#counter.ts#485;/home/tom/code/credit/src/frontend/index.js#proxies.js#327;/home/tom/code/credit/src/frontend/index.js#table.js#445;/home/tom/code/credit/src/frontend/index.js#text.js#408;/home/tom/code/credit/src/frontend/index.js#uuid#181;" target="/home/tom/code/credit/src/frontend/proxies.js#common.ts#20;/home/tom/code/credit/src/frontend/proxies.js#constants.ts#83;/home/tom/code/credit/src/frontend/proxies.js#table.js#161;/home/tom/code/credit/src/frontend/proxies.js#text.js#124;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/src/connection.js#Backend#138;/home/tom/code/credit/src/src/connection.js#Frontend#97;/home/tom/code/credit/src/src/connection.js#common.ts#70;/home/tom/code/credit/src/src/connection.js#immutable-nonambient.d.ts#24;" target="/home/tom/code/credit/src/src/common.ts">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/frontend/apply_patch.js#common.ts#55;/home/tom/code/credit/src/frontend/apply_patch.js#constants.ts#143;/home/tom/code/credit/src/frontend/apply_patch.js#counter.ts#296;/home/tom/code/credit/src/frontend/apply_patch.js#table.js#256;/home/tom/code/credit/src/frontend/apply_patch.js#text.js#201;" target="/home/tom/code/credit/src/frontend/constants.ts">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/src/watchable_doc.js#Backend#85;/home/tom/code/credit/src/src/watchable_doc.js#Frontend#44;/home/tom/code/credit/src/src/watchable_doc.js#immutable-nonambient.d.ts#16;" target="/home/tom/code/credit/src/backend/index.js#OpSet#131;/home/tom/code/credit/src/backend/index.js#common.ts#99;/home/tom/code/credit/src/backend/index.js#immutable-nonambient.d.ts#30;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/frontend/context.js#apply_patch.js#106;/home/tom/code/credit/src/frontend/context.js#common.ts#313;/home/tom/code/credit/src/frontend/context.js#constants.ts#59;/home/tom/code/credit/src/frontend/context.js#counter.ts#258;/home/tom/code/credit/src/frontend/context.js#table.js#197;/home/tom/code/credit/src/frontend/context.js#text.js#160;/home/tom/code/credit/src/frontend/context.js#uuid#345;" target="/home/tom/code/credit/src/frontend/text.js#constants.ts#42;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="/home/tom/code/credit/src/src/doc_set.js#Backend#122;/home/tom/code/credit/src/src/doc_set.js#Frontend#81;/home/tom/code/credit/src/src/doc_set.js#immutable-nonambient.d.ts#21;/home/tom/code/credit/src/src/doc_set.js#uuid#49;" target="/home/tom/code/credit/src/backend/index.js#OpSet#131;/home/tom/code/credit/src/backend/index.js#common.ts#99;/home/tom/code/credit/src/backend/index.js#immutable-nonambient.d.ts#30;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Orthogonal" zoom="0.442008486562942" x="732.5" y="697.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>All</Category>
+  </Categories>
+  <VISIBILITY>Details</VISIBILITY>
+</Diagram>
+

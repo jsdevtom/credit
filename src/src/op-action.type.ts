@@ -1,0 +1,10 @@
+export type OpAction =
+  | 'ins'
+  | 'del'
+  | 'inc'
+  | 'link'
+  | 'set'
+  | 'makeText'
+  | 'makeTable'
+  | 'makeList'
+  | 'makeMap'
