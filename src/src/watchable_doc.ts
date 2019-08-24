@@ -7,11 +7,11 @@ import {Change} from './change.interface';
 const Frontend = require('../frontend');
 const Backend = require('../backend');
 
-export type WatchableDocHandler<T> = (doc: Doc<T>) => void
+export type WatchableDocHandler<T = any> = (doc: Doc<T>) => void
 
 // TODO-Tom: Here you changed D, T = Proxy<D> to D extends Doc<T>, T = Proxy.
 //  This may be wrong.
-export class WatchableDoc<D extends Doc<T>, T = Proxy<D>> {
+export class WatchableDoc<D extends Doc<T> = any, T = Proxy<D>> {
   private doc: D;
   private handlers: Set<WatchableDocHandler<T>>;
 
@@ -27,7 +27,7 @@ export class WatchableDoc<D extends Doc<T>, T = Proxy<D>> {
 
   set(doc: D): void {
     this.doc = doc;
-    this.handlers.forEach(handler => handler && handler(doc))
+    this.handlers.forEach((handler: WatchableDocHandler<T> | undefined) => handler && handler(doc))
   }
 
   applyChanges(changes: Change[]): D {

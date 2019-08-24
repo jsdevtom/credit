@@ -2,79 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55c14854-f838-4509-9905-d2b609e6f852" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/@types/automerge/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/op_set.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/skip_list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frontend/apply_patch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frontend/constants.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frontend/counter.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frontend/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frontend/proxies.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frontend/table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frontend/text.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/automerge.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/clock.interface.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/collection-type.type.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/common.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/conflict.interface.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/connection.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/data-type.type.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/diff-action.type.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/diff.interface.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/doc.type.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/doc_set.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/freeze.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/list.interface.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/message.interface.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/op-action.type.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/op.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/proxy.type.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/readonly.type.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/request-type.type.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/text.interface.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/uuid.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/watchable_doc.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/backend_test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/connection_test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/docset_test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/frontend_test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/helpers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/immutable_test.disabled" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/mocha.opts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/proxies_test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/skip_list_test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/table_test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/text_test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/typescript_test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/uuid_test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/watchable_doc_test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/backend/backend-state.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/change-fn.type.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/init-options.type.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/state.interface.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actor/actor.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/custom-node-extensions.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grow-only-counter/grow-only-counter.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grow-only-counter/grow-only-counter.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/change.interface.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/merger.interface.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mutation/mutation.interface.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reflect-by-id/reflect-by-id.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scratches/all.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scratches/change.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scratches/constants.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scratches/context.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/context.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scratches/deep-copy.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scratches/init.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scratches/is-object.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scratches/observable-slim.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scratches/recursive-proxy-handler.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scratches/reflect.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scratches/scratch_2.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scratches/store.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scratches/types.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/uuid4.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/automerge.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/automerge.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/change.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/change.interface.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/watchable_doc.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/watchable_doc.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/immutable_test.disabled" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/immutable_test.disabled" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/text_test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/text_test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/uuid_test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/uuid_test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/watchable_doc_test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/watchable_doc_test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tsconfig.spec.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.spec.json" afterDir="false" />
     </list>
@@ -134,7 +75,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
@@ -165,18 +106,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Jest.Automerge.DocSet">
-    <configuration name="Automerge.Backend" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Jest.All Tests">
+    <configuration name="All Tests" type="JavaScriptTestRunnerJest" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/src/test/backend_test.js" />
-      <test-names>
-        <test-name value="Automerge.Backend" />
-      </test-names>
+      <scope-kind value="ALL" />
       <method v="2" />
     </configuration>
     <configuration name="Automerge.DocSet" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
@@ -222,6 +159,28 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="Automerge.Text" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/test/text_test.js" />
+      <test-names>
+        <test-name value="Automerge.Text" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
     <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -232,13 +191,21 @@
       <envs />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Jest.All Tests" />
+      <item itemvalue="Jest.Automerge.DocSet" />
+      <item itemvalue="Jest.Automerge.DocSet.should have a document inside the docset" />
+      <item itemvalue="Jest.Automerge.Frontend.performing changes.counters.should handle counters inside maps" />
+      <item itemvalue="Jest.Automerge.Text" />
+      <item itemvalue="npm.test" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.Automerge.Text" />
         <item itemvalue="Jest.Automerge.DocSet" />
         <item itemvalue="Jest.Automerge.DocSet.should have a document inside the docset" />
         <item itemvalue="Jest.Automerge.Frontend.performing changes.counters.should handle counters inside maps" />
         <item itemvalue="npm.test" />
-        <item itemvalue="Jest.Automerge.Backend" />
       </list>
     </recent_temporary>
   </component>
@@ -260,7 +227,9 @@
       <workItem from="1566233274033" duration="6567000" />
       <workItem from="1566407022539" duration="5880000" />
       <workItem from="1566532584318" duration="2643000" />
-      <workItem from="1566574789265" duration="947000" />
+      <workItem from="1566574789265" duration="1128000" />
+      <workItem from="1566617425885" duration="527000" />
+      <workItem from="1566617970851" duration="14843000" />
     </task>
     <servers />
   </component>
@@ -294,9 +263,10 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/test/docset_test.js</url>
-          <line>26</line>
-          <option name="timeStamp" value="3" />
+          <url>file://$PROJECT_DIR$/src/src/automerge.ts</url>
+          <line>154</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -1,13 +1,22 @@
-const assert = require('assert');
-const sinon = require('sinon');
+import * as assert from 'assert';
+
+import * as sinon from 'sinon';
+import {SinonSpy} from 'sinon';
+import {WatchableDoc} from '../src/watchable_doc';
+import {Change} from '../src/change.interface';
+
 const Automerge = process.env.TEST_DIST === '1' ? require('../dist/automerge') : require('../src/automerge');
 
 describe('Automerge.WatchableDoc', () => {
-  let watchDoc, beforeDoc, afterDoc, changes, callback;
+  let watchDoc: WatchableDoc;
+  let beforeDoc: WatchableDoc;
+  let afterDoc: WatchableDoc;
+  let changes: Change[];
+  let callback: SinonSpy;
 
   beforeEach(() => {
-    beforeDoc = Automerge.change(Automerge.init(), doc => doc.document = 'watch me now');
-    afterDoc = Automerge.change(beforeDoc, doc => doc.document = 'i can mash potato');
+    beforeDoc = Automerge.change(Automerge.init(), (doc: any) => doc.document = 'watch me now');
+    afterDoc = Automerge.change(beforeDoc, (doc: any) => doc.document = 'i can mash potato');
     changes = Automerge.getChanges(beforeDoc, afterDoc);
     watchDoc = new Automerge.WatchableDoc(beforeDoc);
     callback = sinon.spy();

@@ -6,7 +6,8 @@
     "outDir": "./lib",
     "strict": true,
     "types": [
-      "node"
+      "node",
+      "jest"
     ]
   },
   "include": [
@@ -15,4 +16,4 @@
   "exclude": [
     "src/**/*.spec.*"
   ]
-}s
+}

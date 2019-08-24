@@ -1,38 +1,47 @@
-const assert = require('assert');
+import * as assert from 'assert';
+import {Text} from '../src/text.interface';
+
 const Automerge = process.env.TEST_DIST === '1' ? require('../dist/automerge') : require('../src/automerge');
 const { assertEqualsOneOf } = require('./helpers');
 
+interface TextTestDoc {
+  text: Text;
+}
+
 describe('Automerge.Text', () => {
-  let s1, s2;
+  // TODO-Tom: type vars
+  let s1: any;
+  let s2: any;
+
   beforeEach(() => {
-    s1 = Automerge.change(Automerge.init(), doc => doc.text = new Automerge.Text());
+    s1 = Automerge.change(Automerge.init(), (doc: any) => doc.text = new Automerge.Text());
     s2 = Automerge.merge(Automerge.init(), s1)
   });
 
   it('should support insertion', () => {
-    s1 = Automerge.change(s1, doc => doc.text.insertAt(0, 'a'));
+    s1 = Automerge.change(s1, (doc: any) => doc.text.insertAt(0, 'a'));
     assert.strictEqual(s1.text.length, 1);
     assert.strictEqual(s1.text.get(0), 'a')
   });
 
   it('should support deletion', () => {
-    s1 = Automerge.change(s1, doc => doc.text.insertAt(0, 'a', 'b', 'c'));
-    s1 = Automerge.change(s1, doc => doc.text.deleteAt(1, 1));
+    s1 = Automerge.change(s1, (doc: any) => doc.text.insertAt(0, 'a', 'b', 'c'));
+    s1 = Automerge.change(s1, (doc: any) => doc.text.deleteAt(1, 1));
     assert.strictEqual(s1.text.length, 2);
     assert.strictEqual(s1.text.get(0), 'a');
     assert.strictEqual(s1.text.get(1), 'c')
   });
 
   it('should handle concurrent insertion', () => {
-    s1 = Automerge.change(s1, doc => doc.text.insertAt(0, 'a', 'b', 'c'));
-    s2 = Automerge.change(s2, doc => doc.text.insertAt(0, 'x', 'y', 'z'));
+    s1 = Automerge.change(s1, (doc: any) => doc.text.insertAt(0, 'a', 'b', 'c'));
+    s2 = Automerge.change(s2, (doc: any) => doc.text.insertAt(0, 'x', 'y', 'z'));
     s1 = Automerge.merge(s1, s2);
     assert.strictEqual(s1.text.length, 6);
     assertEqualsOneOf(s1.text.join(''), 'abcxyz', 'xyzabc')
   });
 
   it('should handle text and other ops in the same change', () => {
-    s1 = Automerge.change(s1, doc => {
+    s1 = Automerge.change(s1, (doc: any) => {
       doc.foo = 'bar';
       doc.text.insertAt(0, 'a')
     });
@@ -41,12 +50,12 @@ describe('Automerge.Text', () => {
   });
 
   it('should serialize to JSON as a simple string', () => {
-    s1 = Automerge.change(s1, doc => doc.text.insertAt(0, 'a', '"', 'b'));
+    s1 = Automerge.change(s1, (doc: any) => doc.text.insertAt(0, 'a', '"', 'b'));
     assert.strictEqual(JSON.stringify(s1), '{"text":"a\\"b"}')
   });
 
   it('should allow modification before an object is assigned to a document', () => {
-    s1 = Automerge.change(Automerge.init(), doc => {
+    s1 = Automerge.change(Automerge.init(), (doc: any) => {
       const text = new Automerge.Text();
       text.insertAt(0, 'a', 'b', 'c', 'd');
       text.deleteAt(2);
@@ -57,7 +66,7 @@ describe('Automerge.Text', () => {
   });
 
   it('should allow modification after an object is assigned to a document', () => {
-    s1 = Automerge.change(Automerge.init(), doc => {
+    s1 = Automerge.change(Automerge.init(), (doc: any) => {
       const text = new Automerge.Text();
       doc.text = text;
       text.insertAt(0, 'a', 'b', 'c', 'd');
@@ -73,7 +82,7 @@ describe('Automerge.Text', () => {
 
   describe('with initial value', () => {
     it('should accept a string as initial value', () => {
-      let s1 = Automerge.change(Automerge.init(), doc => doc.text = new Automerge.Text('init'));
+      let s1 = Automerge.change(Automerge.init(), (doc: any) => doc.text = new Automerge.Text('init'));
       assert.strictEqual(s1.text.length, 4);
       assert.strictEqual(s1.text.get(0), 'i');
       assert.strictEqual(s1.text.get(1), 'n');
@@ -82,7 +91,7 @@ describe('Automerge.Text', () => {
     });
 
     it('should accept an array as initial value', () => {
-      let s1 = Automerge.change(Automerge.init(), doc => doc.text = new Automerge.Text(['i', 'n', 'i', 't']));
+      let s1 = Automerge.change(Automerge.init(), (doc: any) => doc.text = new Automerge.Text(['i', 'n', 'i', 't']));
       assert.strictEqual(s1.text.length, 4);
       assert.strictEqual(s1.text.get(0), 'i');
       assert.strictEqual(s1.text.get(1), 'n');
@@ -109,7 +118,7 @@ describe('Automerge.Text', () => {
     });
 
     it('should allow immediate access to the value', () => {
-      let s1 = Automerge.change(Automerge.init(), doc => {
+      let s1 = Automerge.change(Automerge.init(), (doc: any) => {
         const text = new Automerge.Text('init');
         assert.strictEqual(text.length, 4);
         assert.strictEqual(text.get(0), 'i');
@@ -120,7 +129,7 @@ describe('Automerge.Text', () => {
     });
 
     it('should allow pre-assignment modification of the initial value', () => {
-      let s1 = Automerge.change(Automerge.init(), doc => {
+      let s1 = Automerge.change(Automerge.init(), (doc: any) => {
         const text = new Automerge.Text('init');
         text.deleteAt(3);
         assert.strictEqual(text.join(''), 'ini');
@@ -131,7 +140,7 @@ describe('Automerge.Text', () => {
     });
 
     it('should allow post-assignment modification of the initial value', () => {
-      let s1 = Automerge.change(Automerge.init(), doc => {
+      let s1 = Automerge.change(Automerge.init(), (doc: any) => {
         const text = new Automerge.Text('init');
         doc.text = text;
         text.deleteAt(0);

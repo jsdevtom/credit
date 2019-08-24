@@ -23,7 +23,7 @@
       "js"
     ],
     "transform": {
-      "\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+      "\\.ts$": "ts-jest"
     },
     "testRegex": "/src/test/.*\\.(t|j)s$"
   },
@@ -45,6 +45,7 @@
   "devDependencies": {
     "@types/jest": "^24.0.15",
     "@types/node": "^12.7.2",
+    "@types/sinon": "^7.0.13",
     "jest": "^24.8.0",
     "jsverify": "^0.8.4",
     "sinon": "^7.4.1",
@@ -54,8 +55,8 @@
     "typescript": "^3.5.2"
   },
   "dependencies": {
-    "reflect-metadata": "^0.1.13",
     "immutable": "^3.8.2",
+    "reflect-metadata": "^0.1.13",
     "transit-immutable-js": "^0.7.0",
     "transit-js": "^0.8.861",
     "uuid": "3.3.2"
