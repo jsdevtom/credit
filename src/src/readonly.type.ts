@@ -1,4 +1,4 @@
-import {List} from './list.interface';
+import {List} from './list';
 import {Text} from './text.interface';
 
 // TODO-Tom: Add me again once table has been converted to typescript.

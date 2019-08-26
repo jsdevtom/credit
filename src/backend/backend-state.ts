@@ -1,3 +1,3 @@
-export interface BackendState {
-  opSet: OpSet
-}
+// export interface BackendState {
+//   opSet: OpSet
+// }

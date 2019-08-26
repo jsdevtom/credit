@@ -1,8 +1,9 @@
 import * as assert from 'assert';
 import {Text} from '../src/text.interface';
+import {assertEqualsOneOf} from './helpers';
 
 const Automerge = process.env.TEST_DIST === '1' ? require('../dist/automerge') : require('../src/automerge');
-const { assertEqualsOneOf } = require('./helpers');
+
 
 interface TextTestDoc {
   text: Text;
@@ -77,7 +78,9 @@ describe('Automerge.Text', () => {
   });
 
   it('should not allow modification outside of a change callback', () => {
-    assert.throws(() => s1.text.insertAt(0, 'a'), /Text object cannot be modified outside of a change block/)
+    assert.throws(() => s1.text.insertAt(0, 'a'), /Text object cannot be modified outside of a change block/);
+    assert.throws(() => s1.text.set(0, 'a'), /Text object cannot be modified outside of a change block/);
+    assert.throws(() => s1.text.deleteAt(0, 1), /Text object cannot be modified outside of a change block/);
   });
 
   describe('with initial value', () => {
@@ -149,6 +152,32 @@ describe('Automerge.Text', () => {
         assert.strictEqual(doc.text.join(''), 'Init')
       });
       assert.strictEqual(s1.text.join(''), 'Init')
-    })
+    });
+
+    it('should allow Readonly Array methods', () => {
+      let s1 = Automerge.change(Automerge.init(), (doc: TextTestDoc) => {
+        const text = new Automerge.Text('init');
+        doc.text = text;
+        assert.strictEqual(doc.text.concat(['i', 'a', 'l']).join(''), 'initial');
+        assert(doc.text.every(l => typeof l === 'string'));
+        assert.deepEqual(doc.text.filter(l => l === 'i'), ['i', 'i']);
+        assert.strictEqual(doc.text.find(l => l === 't'), 't');
+        assert.strictEqual(doc.text.findIndex(l => l === 'n'), 1);
+        doc.text.forEach((l, i) => assert.strictEqual(l, doc.text.get(i)));
+        assert(doc.text.includes('t'));
+        assert.strictEqual(doc.text.indexOf('z'), -1);
+        assert.strictEqual(doc.text.join(';'), 'i;n;i;t');
+        assert.strictEqual(doc.text.lastIndexOf('i'), 2);
+        assert.deepEqual(doc.text.map(l => l + 'a'), ['ia', 'na', 'ia', 'ta']);
+        assert.strictEqual(doc.text.reduce((a, curr) => a + curr), 'init');
+        assert.strictEqual(doc.text.reduce((a, curr) => a + curr, '0'), '0init');
+        assert.strictEqual(doc.text.reduceRight((a, curr) => a + curr), 'tini');
+        assert.strictEqual(doc.text.reduceRight((a, curr) => a + curr, '0'), '0tini');
+        assert(doc.text.some(l => l === 't'));
+        assert.deepEqual(doc.text.slice(2), ['i', 't']);
+        assert.strictEqual(doc.text.toLocaleString(), 'i,n,i,t');
+        assert.strictEqual(doc.text.toString(), 'i,n,i,t');
+      });
+    });
   })
 });

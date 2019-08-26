@@ -5,7 +5,7 @@
 // prettier-ignore
 import {Map} from 'immutable';
 import {ReadonlyList, ReadonlyText} from './readonly.type';
-import {List} from './list.interface';
+import {List} from './list';
 
 export type Freeze<T> =
   T extends Function ? T

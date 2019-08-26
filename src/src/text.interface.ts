@@ -1,4 +1,4 @@
-import {List} from './list.interface';
+import {List} from './list';
 import {UUID} from './uuid';
 
 export interface Text extends List<string> {

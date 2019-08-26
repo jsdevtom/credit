@@ -3,7 +3,7 @@ test.skip('skip', () => {});
 
 // Assertion that succeeds if the first argument deepEquals at least one of the
 // subsequent arguments (but we don't care which one)
-function assertEqualsOneOf(actual, ...expected) {
+export function assertEqualsOneOf<T>(actual: T, ...expected: T[]): void {
   assert(expected.length > 0);
   for (let i = 0; i < expected.length; i++) {
     try {
@@ -14,5 +14,3 @@ function assertEqualsOneOf(actual, ...expected) {
     }
   }
 }
-
-module.exports = { assertEqualsOneOf };

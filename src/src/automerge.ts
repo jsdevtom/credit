@@ -7,12 +7,14 @@ import {Diff} from './diff.interface';
 import {Clock} from './clock.interface';
 import {State} from './state.interface';
 import {List} from 'immutable';
+import {isObject} from './common';
+import * as uuid from './uuid';
+
 
 const transit = require('transit-immutable-js');
-const uuid = require('./uuid');
 const Frontend = require('../frontend');
 const Backend = require('../backend');
-const { isObject } = require('./common');
+
 
 /**
  * Constructs a new frontend document that reflects the given list of changes.
