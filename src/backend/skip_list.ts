@@ -1,10 +1,10 @@
-const { Map } = require('immutable');
+import {Map} from 'immutable';
 
 // Returns a random number from the geometric distribution with p = 0.75.
 // That is, returns k with probability p * (1 - p)^(k - 1).
 // For example, returns 1 with probability 3/4, returns 2 with probability 3/16,
 // returns 3 with probability 3/64, and so on.
-function randomLevel() {
+function randomLevel(): Iterator<number> {
   // NOTE: this function used to be a generator; it has been converted to a regular
   // function (that mimics the interface of a generator) to avoid having to include
   // generator polyfills in the distribution build.
@@ -21,22 +21,23 @@ function randomLevel() {
 }
 
 class Node {
-  constructor (key, value, level, prevKey, nextKey, prevCount, nextCount) {
-    this.key = key;
-    this.value = value;
-    this.level = level;
-    this.prevKey = prevKey;
-    this.nextKey = nextKey;
-    this.prevCount = prevCount;
-    this.nextCount = nextCount
+  constructor (
+    public readonly key: string | null,
+    public readonly value: number | null,
+    public readonly level: number,
+    public readonly prevKey: Array<string | null>,
+    public readonly nextKey: Array<string | null>,
+    public readonly prevCount: Array<number | null>,
+    public readonly nextCount: Array<number | null>,
+  ) {
   }
 
-  setValue (key, value) {
+  setValue (key: string, value: number) {
     return new Node(this.key, value, this.level, this.prevKey, this.nextKey,
                     this.prevCount, this.nextCount)
   }
 
-  insertAfter (newKey, newLevel, fromLevel, distance) {
+  insertAfter(newKey: string, newLevel: number, fromLevel: number, distance: number) {
     if (newLevel > this.level && this.key !== null) {
       throw new RangeError('Cannot increase the level of a non-head node')
     }
@@ -49,7 +50,7 @@ class Node {
         nextKey[level] = newKey;
         nextCount[level] = distance
       } else {
-        nextCount[level] += 1
+        (nextCount as Array<number>)[level] += 1
       }
     }
 
@@ -57,7 +58,7 @@ class Node {
                     this.prevKey, nextKey, this.prevCount, nextCount)
   }
 
-  insertBefore (newKey, newLevel, fromLevel, distance) {
+  insertBefore(newKey: string, newLevel: number, fromLevel: number, distance: number) {
     if (newLevel > this.level) throw new RangeError('Cannot increase node level');
     const prevKey = this.prevKey.slice();
     const prevCount = this.prevCount.slice();
@@ -67,7 +68,7 @@ class Node {
         prevKey[level] = newKey;
         prevCount[level] = distance
       } else {
-        prevCount[level] += 1
+        (prevCount as Array<number>)[level] += 1
       }
     }
 
@@ -75,7 +76,7 @@ class Node {
                     prevKey, this.nextKey, prevCount, this.nextCount)
   }
 
-  removeAfter (fromLevel, removedLevel, newKeys, distances) {
+  removeAfter (fromLevel: number, removedLevel: number, newKeys: Array<string | null>, distances: Array<number>) {
     const nextKey = this.nextKey.slice();
     const nextCount = this.nextCount.slice();
 
@@ -84,7 +85,7 @@ class Node {
         nextKey[level] = newKeys[level];
         nextCount[level] = distances[level]
       } else {
-        nextCount[level] -= 1
+        (nextCount as Array<number>)[level] -= 1
       }
     }
 
@@ -92,7 +93,7 @@ class Node {
                     this.prevKey, nextKey, this.prevCount, nextCount)
   }
 
-  removeBefore (fromLevel, removedLevel, newKeys, distances) {
+  removeBefore (fromLevel: number, removedLevel: number, newKeys: Array<string | null>, distances: Array<number>) {
     const prevKey = this.prevKey.slice();
     const prevCount = this.prevCount.slice();
 
@@ -101,7 +102,7 @@ class Node {
         prevKey[level] = newKeys[level];
         prevCount[level] = distances[level]
       } else {
-        prevCount[level] -= 1
+        (prevCount as Array<number>)[level] -= 1
       }
     }
 
@@ -111,17 +112,25 @@ class Node {
 }
 
 class SkipList {
-  constructor (randomSource) {
+
+  // assigned in `makeInstance`
+  private readonly _nodes!: Map<string | null, Node>;
+  // assigned in `makeInstance`
+  private readonly _randomSource!: Iterator<number>;
+  // assigned in `makeInstance`
+  private readonly length!: number;
+
+  constructor (randomSource?: () => Iterator<number>) {
     const head = new Node(null, null, 1, [], [null], [], [null]);
     const random = randomSource ? randomSource() : randomLevel();
-    return makeInstance(0, Map().set(null, head), random)
+    return makeInstance(0, Map<string | null, Node>().set(null, head), random)
   }
 
-  get headNode () {
+  get headNode(): Node {
     return this._nodes.get(null)
   }
 
-  predecessors (predecessor, maxLevel) {
+  predecessors(predecessor: string | null, maxLevel: number) {
     const preKeys = [predecessor], preCounts = [1];
 
     for (let level = 1; level < maxLevel; level++) {
@@ -133,7 +142,7 @@ class SkipList {
         if (node.level < level) {
           throw new RangeError('Node ' + preKey + ' below expected level ' + (level - 1))
         }
-        count += node.prevCount[level - 1];
+        count += (node.prevCount as Array<number>)[level - 1];
         preKey = node.prevKey[level - 1]
       }
       preKeys[level] = preKey;
@@ -143,8 +152,9 @@ class SkipList {
     return {preKeys, preCounts}
   }
 
-  successors (successor, maxLevel) {
-    const sucKeys = [successor], sucCounts = [1];
+  successors (successor: string | null, maxLevel: number) {
+    const sucKeys = [successor];
+    const sucCounts = [1];
 
     for (let level = 1; level < maxLevel; level++) {
       let sucKey = sucKeys[level - 1];
@@ -155,7 +165,7 @@ class SkipList {
         if (node.level < level) {
           throw new RangeError('Node ' + sucKey + ' below expected level ' + (level - 1))
         }
-        count += node.nextCount[level - 1];
+        count += (node.nextCount as Array<number>)[level - 1];
         sucKey = node.nextKey[level - 1]
       }
       sucKeys[level] = sucKey;
@@ -167,8 +177,8 @@ class SkipList {
 
   // Inserts a new list element immediately after the element with key `predecessor`.
   // If predecessor === null, inserts at the head of the list.
-  insertAfter (predecessor, key, value) {
-    if (typeof key !== 'string' || key === '') {
+  insertAfter (predecessor: string | null, key: string, value: number) {
+    if (typeof key as unknown !== 'string' || key === '') {
       throw new RangeError('Key must be a nonempty string')
     }
     if (!this._nodes.has(predecessor)) {
@@ -208,7 +218,7 @@ class SkipList {
     }), this._randomSource)
   }
 
-  insertIndex (index, key, value) {
+  insertIndex (index: number, key: string, value: number) {
     if (typeof index !== 'number' || index < 0) {
       throw new RangeError('Index must be a non-negative integer')
     }
@@ -219,7 +229,7 @@ class SkipList {
     }
   }
 
-  removeKey (key) {
+  removeKey (key: string | null) {
     if (typeof key !== 'string' || !this._nodes.has(key)) {
       throw new RangeError('The given key cannot be removed because it does not exist')
     }
@@ -253,22 +263,22 @@ class SkipList {
     }), this._randomSource)
   }
 
-  removeIndex (index) {
+  removeIndex (index: number) {
     return this.removeKey(this.keyOf(index))
   }
 
-  indexOf (key) {
-    if (typeof key !== 'string' || key === '' || !this._nodes.has(key)) return -1;
+  indexOf (key: string) {
+    if (typeof key as unknown !== 'string' || key === '' || !this._nodes.has(key)) return -1;
     let node = this._nodes.get(key), count = 0;
     while (node && node.key) {
-      count += node.prevCount[node.level - 1];
+      count += (node.prevCount as Array<number>)[node.level - 1];
       node = this._nodes.get(node.prevKey[node.level - 1])
     }
     return count - 1
   }
 
-  keyOf (index) {
-    if (typeof index !== 'number') return null;
+  keyOf (index: number) {
+    if (typeof index as unknown !== 'number') return null;
     if (index < 0) index = index + this.length;
     if (index < 0 || index >= this.length) return null;
 
@@ -276,25 +286,25 @@ class SkipList {
     while (true) {
       if (count === index + 1) {
         return node.key
-      } else if (count + node.nextCount[level] > index + 1) {
+      } else if (count + (node.nextCount as Array<number>)[level] > index + 1) {
         level -= 1
       } else {
-        count += node.nextCount[level];
+        count += (node.nextCount as Array<number>)[level];
         node = this._nodes.get(node.nextKey[level])
       }
     }
   }
 
-  getValue (key) {
-    if (typeof key !== 'string' || key === '') {
+  getValue (key: string) {
+    if (typeof key as unknown !== 'string' || key === '') {
       throw new RangeError('Key must be a nonempty string')
     }
     const node = this._nodes.get(key);
     return node && node.value
   }
 
-  setValue (key, value) {
-    if (typeof key !== 'string' || key === '') {
+  setValue (key: string, value: number) {
+    if (typeof key as unknown !== 'string' || key === '') {
       throw new RangeError('Key must be a nonempty string')
     }
     let node = this._nodes.get(key);
@@ -304,27 +314,34 @@ class SkipList {
     return makeInstance(this.length, this._nodes.set(key, node), this._randomSource)
   }
 
-  iterator (mode) {
+  iterator<Mode extends 'keys' | 'values' | 'entries'>(mode: Mode)
+    : Mode extends 'keys' ? Iterator<string> :
+        Mode extends 'values' ? Iterator<number | null> :
+          Mode extends 'entries' ? Iterator<Array<string | number | null>> :
+            Iterator<undefined>
+  {
     // NOTE: this method used to be a generator; it has been converted to a regular
     // method (that mimics the interface of a generator) to avoid having to include
     // generator polyfills in the distribution build.
     const nodes = this._nodes;
     let key = nodes.get(null).nextKey[0];
     return {
-      next () {
-        if (!key) return { value: undefined, done: true };
+      next (): Iterator<string> | Iterator<number | null> | Iterator<Array<string | number | null>> | Iterator<undefined> {
+        if (!key) return { value: undefined, done: true } as unknown as Iterator<undefined> ;
         const node = nodes.get(key);
         let rval = undefined;
         switch (mode) {
           case 'keys':    rval = {value: key,               done: false}; break;
           case 'values':  rval = {value: node.value,        done: false}; break;
-          case 'entries': rval = {value: [key, node.value], done: false}; break
+          case 'entries': rval = {value: [key, node.value], done: false}; break;
         }
         key = node.nextKey[0];
-        return rval
+        // TODO-Tom: unany
+        return rval as any
       },
       [Symbol.iterator]: () => this.iterator(mode),
-    }
+      // TODO-Tom: unany
+    } as any;
   }
 
   [Symbol.iterator] () {
@@ -332,11 +349,13 @@ class SkipList {
   }
 }
 
-function makeInstance(length, nodes, randomSource) {
+function makeInstance(length: number, nodes: Map<string | null, Node>, randomSource: Iterator<number>): SkipList {
   const instance = Object.create(SkipList.prototype);
+
   instance.length = length;
   instance._nodes = nodes;
   instance._randomSource = randomSource;
+
   return instance
 }
 
