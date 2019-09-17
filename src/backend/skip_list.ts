@@ -111,7 +111,7 @@ class Node {
   }
 }
 
-class SkipList {
+export class SkipList {
 
   // assigned in `makeInstance`
   private readonly _nodes!: Map<string | null, Node>;

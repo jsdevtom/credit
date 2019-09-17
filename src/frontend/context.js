@@ -1,5 +1,5 @@
 const { CACHE, INBOUND, OBJECT_ID, CONFLICTS, MAX_ELEM } = require('./constants');
-const { applyDiffs } = require('./apply_patch');
+const { applyDiffs } = require('./apply_patch.js');
 const { Text, getElemId } = require('./text');
 const { Table } = require('./table');
 const { Counter, getWriteableCounter } = require('./counter');

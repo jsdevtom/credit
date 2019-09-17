@@ -3,7 +3,7 @@ import {Change} from './change.interface';
 import {Doc} from './doc.type';
 import {FreezeObject} from './freeze';
 
-const Frontend = require('../frontend');
+const Frontend = require('../frontend/index.js');
 const Backend = require('../backend');
 
 type DocSetHandler<T> = (docId: string, doc: Doc<T>) => void

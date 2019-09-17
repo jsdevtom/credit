@@ -6,7 +6,7 @@ import {Change} from './change.interface';
 
 const { Map, fromJS } = require('immutable');
 const { lessOrEqual } = require('./common');
-const Frontend = require('../frontend');
+const Frontend = require('../frontend/index.js');
 const Backend = require('../backend');
 
 export type MessageSender = (message: Message) => void;

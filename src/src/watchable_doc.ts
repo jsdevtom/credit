@@ -4,7 +4,7 @@ import {Doc} from './doc.type';
 import {Set} from 'immutable';
 import {Change} from './change.interface';
 
-const Frontend = require('../frontend');
+const Frontend = require('../frontend/index.js');
 const Backend = require('../backend');
 
 export type WatchableDocHandler<T = any> = (doc: Doc<T>) => void

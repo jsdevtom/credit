@@ -1,11 +1,14 @@
 import {ELEM_IDS, MAX_ELEM, OBJECT_ID} from './constants';
+import {Conflict} from '../src/conflict.interface';
 
+
+export type TextElems = { value: string, elemId?: string, conflicts?: Conflict[] };
 
 export class Text {
   // TODO-Tom: ignored due to not initialized
   // @ts-ignore
-  private elems: Array<{ value: string, elemId?: string }>;
-  private [OBJECT_ID]: string;
+  elems: Array<TextElems>;
+  [OBJECT_ID]: string;
   // TODO-Tom:
   private context: any;
   private [MAX_ELEM]: number;
@@ -222,7 +225,7 @@ export class Text {
 
 }
 
-function instantiateText(
+export function instantiateText(
   objectId: string | undefined,
   elems: Array<{value: string}>,
   maxElem: number | undefined,

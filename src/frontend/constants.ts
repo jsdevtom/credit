@@ -24,7 +24,7 @@ export interface IHasINBOUND {
 export const STATE = Symbol('_state');     // object containing metadata about current state (e.g. sequence numbers)
 export interface IHasSTATE {
   // TODO-Tom: find correct type
-  [STATE]: any;
+  [STATE]: {};
 }
 
 // Properties of all Automerge objects

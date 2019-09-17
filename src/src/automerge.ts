@@ -12,7 +12,7 @@ import * as uuid from './uuid';
 
 
 const transit = require('transit-immutable-js');
-const Frontend = require('../frontend');
+const Frontend = require('../frontend/index.js');
 const Backend = require('../backend');
 
 

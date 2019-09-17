@@ -1,5 +1,5 @@
 import {UUID} from '../src/uuid';
-import {CONFLICTS, IHasOBJECT_ID, OBJECT_ID} from './constants';
+import {CONFLICTS, IHasCONFLICTS, IHasOBJECT_ID, OBJECT_ID} from './constants';
 import {copyObject, isObject} from '../src/common';
 import {isFrozen} from '../src/is-frozen';
 import {isMutable} from '../src/is-mutable';
@@ -51,7 +51,7 @@ interface TableRows<T extends IHasOBJECT_ID> {
 export class Table<T extends IHasOBJECT_ID, KeyOrder extends Array<keyof T>> implements IHasOBJECT_ID {
 
   [OBJECT_ID]: string;
-  protected entries: Readonly<TableRows<T>>;
+  entries: Readonly<TableRows<T> | TableRows<Array<string> & IHasOBJECT_ID>>;
   protected columns: KeyArray<T, KeyOrder>;
   /**
    * This constructor is used by application code when creating a new Table
@@ -69,7 +69,7 @@ export class Table<T extends IHasOBJECT_ID, KeyOrder extends Array<keyof T>> imp
   /**
    * Looks up a row in the table by its unique ID.
    */
-  byId(id: UUID): T {
+  byId(id: UUID): T | (Array<string> & IHasOBJECT_ID) {
     return this.entries[id];
   }
 
@@ -96,7 +96,7 @@ export class Table<T extends IHasOBJECT_ID, KeyOrder extends Array<keyof T>> imp
    * order.
    */
   get rows(): T[] {
-    return this.ids.map(id => this.byId(id))
+    return this.ids.map(id => this.byId(id) as T)
   }
 
   /**
@@ -170,11 +170,11 @@ export class Table<T extends IHasOBJECT_ID, KeyOrder extends Array<keyof T>> imp
    * a patch to the table, and `freeze()` is called on it when we have finished
    * applying the patch.
    */
-  _clone() {
+  _clone<T extends IHasOBJECT_ID, KeyOrder extends Array<keyof T>>() {
     if (!this[OBJECT_ID]) {
       throw new RangeError('clone() requires the objectId to be set')
     }
-    return instantiateTable(this[OBJECT_ID], copyObject(this.entries))
+    return instantiateTable<T, Array<keyof T>>(this[OBJECT_ID], copyObject(this.entries))
   }
 
   /**
@@ -236,7 +236,11 @@ export class Table<T extends IHasOBJECT_ID, KeyOrder extends Array<keyof T>> imp
    */
   toJSON() {
     const rows: TableRows<T> = {};
-    for (let id of this.ids) rows[id] = this.byId(id);
+    for (let id of this.ids) {
+      // TODO-Tom: remove ts-ignore
+      // @ts-ignore
+      rows[id] = this.byId(id);
+    }
     return {columns: this.columns, rows}
   }
 }
@@ -318,7 +322,7 @@ class WriteableTable<T extends IHasOBJECT_ID, KeyOrder extends Array<keyof T>> e
  * This function is used to instantiate a Table object in the context of
  * applying a patch (see apply_patch.js).
  */
-export function instantiateTable<T extends IHasOBJECT_ID, KeyOrder extends Array<keyof T>>(objectId: string, entries?: object): Table<T, KeyOrder> {
+export function instantiateTable<T extends IHasOBJECT_ID, KeyOrder extends Array<keyof T>>(objectId: string, entries?: object): Table<T, KeyOrder> & IHasOBJECT_ID & IHasCONFLICTS {
   const instance = Object.create(Table.prototype);
   instance[OBJECT_ID] = objectId;
   instance[CONFLICTS] = Object.freeze({});

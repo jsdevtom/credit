@@ -11,8 +11,8 @@ export function isObject(obj: unknown): obj is object {
  * Returns a shallow copy of the object `obj`. Faster than `Object.assign({}, obj)`.
  * https://jsperf.com/cloning-large-objects/1
  */
-export function copyObject<T extends { [key: string]: any }>(obj: T): T | object {
-  if (!isObject(obj)) return {};
+export function copyObject<T extends { [key: string]: any }>(obj: T): T {
+  if (!isObject(obj)) return {} as T;
   let copy: T = {} as T;
   for (const key of (Object.keys(obj) as Array<keyof T>)) {
     copy[key] = obj[key]
